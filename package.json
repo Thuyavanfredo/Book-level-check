@@ -1,0 +1,37 @@
+{
+  "name": "Book-level-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "icon": "link-building.ico",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder -p always",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "productName": "Book Level Check Tool",
+    "win": {
+      "target": "NSIS",
+      "icon": "link-building.ico"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Thuyavanfredo",
+        "repo": "Book-level-check"
+      }
+    ]
+  },
+  "author": "Thuyavan",
+  "license": "ISC",
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^5.3.0"
+  },
+  "devDependencies": {
+    "electron": "^6.1.12",
+    "electron-builder": "^23.6.0"
+  }
+}
