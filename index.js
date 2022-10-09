@@ -36,8 +36,9 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 350,
+    height: 320,
+    resizable: false,
     icon: path.join(__dirname, 'link-building.ico'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
@@ -46,7 +47,7 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  mainWindow.menuBarVisible = false
+  mainWindow.setMenuBarVisibility(false)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();

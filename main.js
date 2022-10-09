@@ -29,7 +29,7 @@ $(document).ready(function () {
               na_.push(i)
             }else{
               console.log(ieno,inputs[0].split(ieno))
-              let nextWord = inputs[0].split(ieno)[1].split("Part No.: ")[1]?.split(" ")[0]?.split("\n")[0]
+              let nextWord = inputs[0].split(ieno)[1].split("Part No.: ")[1]&&inputs[0].split(ieno)[1].split("Part No.: ")[1].split(" ")[0]&&inputs[0].split(ieno)[1].split("Part No.: ")[1]&&inputs[0].split(ieno)[1].split("Part No.: ")[1].split(" ")[0].split("\n")[0]
               if(nextWord.includes(i)){
                 a_.push(i)
               }else{
